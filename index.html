@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOJ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f6f7;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .panel {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .problem-id {
+            width: 80px;
+        }
+
+        .difficulty {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .easy { background: #e8f5e9; color: #2e7d32; }
+        .medium { background: #fff3e0; color: #ef6c00; }
+        .hard { background: #ffebee; color: #c62828; }
+
+        .submission-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .accepted { background: #e8f5e9; color: #2e7d32; }
+        .pending { background: #fff3e0; color: #ef6c00; }
+        .rejected { background: #ffebee; color: #c62828; }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>简易OJ系统</h2>
+        <div class="nav-links">
+            <a href="#problems">题库</a>
+            <a href="#submissions">提交记录</a>
+            <a href="#login">登录</a>
+            <a href="#register">注册</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- 题目列表 -->
+        <div class="panel" id="problems">
+            <h3>题目列表</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="problem-id">题号</th>
+                        <th>题目名称</th>
+                        <th>难度</th>
+                        <th>通过率</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>A+B Problem</td>
+                        <td><span class="difficulty easy">简单</span></td>
+                        <td>75.6%</td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>两数之和</td>
+                        <td><span class="difficulty medium">中等</span></td>
+                        <td>45.2%</td>
+                    </tr>
+                    <tr>
+                        <td>1003</td>
+                        <td>最大子序和</td>
+                        <td><span class="difficulty hard">困难</span></td>
+                        <td>32.1%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 提交记录 -->
+        <div class="panel" id="submissions">
+            <h3>提交记录</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>提交ID</th>
+                        <th>题目</th>
+                        <th>用户</th>
+                        <th>结果</th>
+                        <th>时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#789012</td>
+                        <td>1001. A+B Problem</td>
+                        <td>user123</td>
+                        <td><span class="submission-status accepted">Accepted</span></td>
+                        <td>2024-03-20 14:30</td>
+                    </tr>
+                    <tr>
+                        <td>#789011</td>
+                        <td>1002. 两数之和</td>
+                        <td>test_user</td>
+                        <td><span class="submission-status rejected">Wrong Answer</span></td>
+                        <td>2024-03-20 14:25</td>
+                    </tr>
+                    <tr>
+                        <td>#789010</td>
+                        <td>1001. A+B Problem</td>
+                        <td>new_user</td>
+                        <td><span class="submission-status pending">Pending</span></td>
+                        <td>2024-03-20 14:20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
